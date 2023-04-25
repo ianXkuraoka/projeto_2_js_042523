@@ -17,18 +17,23 @@ for(let i=0; i<Users; i++){
 
 /*criando um array de imagens*/
 var imagens=[
-    'img/1.jpg',
-    'img/2.jpg',
-    'img/3.jpg',
+    'img/img1.jpg',
+    'img/img2.jpg',
+    'img/img3.jpg',
 ];
 
 
 /*criando um array de variáveis*/
-var index =0;
+var Index =0;
 var time =2000;
 
 
 /*criando um array de função*/
 function slideShow(){
-    document.getElementById('image')
+    document.getElementById('image').src =imagens[Index];/*Pega id e o caminho*/
+    Index++;/*incrementa*/
+    if (Index == imagens.length){Index =0}; /*verifica se tem imagens e conta*/
+    setTimeout("slideShow()",time); /*definindo o tempo de 2 milisegundos*/
 }
+
+slideShow();
