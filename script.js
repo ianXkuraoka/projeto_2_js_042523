@@ -14,3 +14,8 @@ for(let i=0; i<Users; i++){
     msg.innerHTML +=`<p>${usuarios[i].nome} ${usuarios[i].idade}</p>`
 }
 
+var imagens=[
+    'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg',
+];
